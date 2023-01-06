@@ -1,0 +1,20 @@
+<div Class="componenete">
+
+  <div class="container">
+  <h1>Pokédex</h1>
+  <input type="text" [(ngModel)]="name" >
+  <button (click)="search()">Buscar</button>
+  <button (click)="recargar()">Recargar</button>
+  </div>
+  <div class="container row">
+    <div class="card" style="width: 18rem;" *ngFor="let data of info">
+      <img src="{{data.sprites.front_default}}" class="card-img-top" alt="pokemon">
+      <div class="card-body">
+        <h5 class="card-title">{{data.name}}</h5>
+        <p class="card-text">Tipo :</p><div class="row"><p  *ngFor="let type of data.types">{{type.type.name}}</p></div>
+        <a href="#" class="btn btn-info">detalle</a>
+      </div>
+    </div>
+  </div>
+</div>
+
