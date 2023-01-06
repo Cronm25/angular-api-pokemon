@@ -18,7 +18,6 @@ export class PokemonComponent implements OnInit  {
   search(){
     this.pokemonService.GetPokemon(this.name)
     .subscribe((data) =>{
-      console.log(data)
       this.info=[data]
     })
   }
